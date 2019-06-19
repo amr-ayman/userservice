@@ -1,0 +1,213 @@
+/* App Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Tajawal:400,700&display=swap&subset=arabic");
+/* App Icons */
+@import url("https://cdn.materialdesignicons.com/3.6.95/css/materialdesignicons.min.css");
+/* App colors */
+/* Screen Sizes */
+body {
+  overflow: hidden;
+  min-width: 320px;
+  font-family: "Lato", sans-serif; }
+
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+/* Header Styles Start Here*/
+header {
+  display: flex;
+  align-items: center;
+  background-color: #0C3065; }
+  header .brand {
+    width: 250px;
+    height: 70px;
+    margin-left: -165px;
+    background-position-x: 80px;
+    background-image: url("../images/orcatech-logo.png");
+    transition: all 0.2s ease-in-out; }
+    header .brand:hover {
+      cursor: pointer; }
+    header .brand.wide {
+      margin-left: 0;
+      background-position-x: 0; }
+    header .brand:focus {
+      outline: none; }
+  header .toggle .mdi {
+    color: #FFFFFF;
+    font-size: 21px;
+    transition: color 0.2s ease-in-out; }
+    header .toggle .mdi:hover {
+      color: #F6A910;
+      cursor: pointer; }
+  header .options {
+    width: 200px;
+    display: flex;
+    padding: 0 30px;
+    margin-left: auto;
+    align-items: center;
+    justify-content: space-between; }
+    header .options .lang {
+      font-family: "Tajawal", sans-serif; }
+      header .options .lang a {
+        color: #FFFFFF;
+        text-decoration: none; }
+    header .options .user .dropdown {
+      margin-right: 15px; }
+      header .options .user .dropdown .photo {
+        width: 50px; }
+        header .options .user .dropdown .photo img {
+          max-width: 100%; }
+        header .options .user .dropdown .photo.dropdown-toggle::after {
+          color: #FFFFFF;
+          position: absolute;
+          top: 45%;
+          right: -15px; }
+      header .options .user .dropdown .dropdown-menu.show {
+        margin-top: 9px;
+        margin-left: 15px; }
+    header .options .user:hover {
+      cursor: pointer; }
+
+/* Main Section Styles Start Here*/
+main {
+  flex-grow: 1;
+  display: flex; }
+  main aside {
+    margin-top: -1px; }
+    main aside .main-menu {
+      width: 80px;
+      height: 100%;
+      background-color: #0C3065;
+      transition: all 0.2s ease-in-out; }
+      main aside .main-menu .nav-menu {
+        margin: 0;
+        padding: 0;
+        list-style-type: none; }
+        main aside .main-menu .nav-menu .menu-item {
+          padding: 15px 30px; }
+          main aside .main-menu .nav-menu .menu-item .mdi {
+            color: #3299E9;
+            font-size: 18px;
+            margin-right: 10px; }
+          main aside .main-menu .nav-menu .menu-item .menu-link {
+            display: none;
+            color: #3299E9; }
+            main aside .main-menu .nav-menu .menu-item .menu-link:hover {
+              text-decoration: none; }
+          main aside .main-menu .nav-menu .menu-item.active {
+            background-color: #042565; }
+            main aside .main-menu .nav-menu .menu-item.active .mdi {
+              color: #F6A910; }
+            main aside .main-menu .nav-menu .menu-item.active .menu-link {
+              color: #FFFFFF; }
+          main aside .main-menu .nav-menu .menu-item:hover {
+            cursor: pointer;
+            background-color: rgba(4, 37, 101, 0.5); }
+            main aside .main-menu .nav-menu .menu-item:hover.active {
+              background-color: #042565; }
+          main aside .main-menu .nav-menu .menu-item:focus {
+            outline: none; }
+      main aside .main-menu.active {
+        width: 250px; }
+        main aside .main-menu.active .nav-menu .menu-item .menu-link {
+          display: inline-block; }
+        main aside .main-menu.active .nav-menu .large-tooltip {
+          display: none; }
+  main section {
+    flex-grow: 1;
+    padding: 20px 15px;
+    position: relative;
+    background-color: #F7F9FB; }
+    main section .page-wrapper .list-title {
+      font-size: 28px;
+      font-weight: 700; }
+    main section .page-wrapper .breadcrumb {
+      background: none;
+      padding: 0 0 10px 0;
+      border-bottom: 1px solid #cecece; }
+      main section .page-wrapper .breadcrumb .breadcrumb-item + .breadcrumb-item {
+        padding-left: 5px; }
+        main section .page-wrapper .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+          color: #6c757d;
+          content: ">";
+          padding-right: 5px; }
+    main section .page-wrapper .list-options {
+      width: 25%;
+      display: flex;
+      justify-content: space-between; }
+      main section .page-wrapper .list-options .option .mdi {
+        margin-right: 5px; }
+        main section .page-wrapper .list-options .option .mdi.mdi-plus {
+          color: #F6A910; }
+        main section .page-wrapper .list-options .option .mdi.mdi-block-helper {
+          color: #EB3B5A; }
+        main section .page-wrapper .list-options .option .mdi.mdi-check {
+          color: #1ABC9C; }
+      main section .page-wrapper .list-options .option:hover {
+        cursor: pointer; }
+    main section .page-wrapper aside {
+      width: 23%;
+      min-width: 335px;
+      max-width: 475px;
+      height: 100%;
+      position: absolute;
+      top: 1px;
+      right: -100%;
+      background-color: #FFFFFF;
+      box-shadow: -1px 0 3px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out; }
+      main section .page-wrapper aside .option {
+        height: 230px;
+        padding: 30px; }
+        main section .page-wrapper aside .option .option-title {
+          color: #FFFFFF;
+          font-size: 24px;
+          margin-top: 100px; }
+          main section .page-wrapper aside .option .option-title .mdi {
+            margin-right: 10px; }
+        main section .page-wrapper aside .option.new {
+          background-color: #F6A910; }
+        main section .page-wrapper aside .option.block {
+          background-color: #EB3B5A; }
+        main section .page-wrapper aside .option.activate {
+          background-color: #1ABC9C; }
+      main section .page-wrapper aside.active {
+        right: 0; }
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+  font-family: "Tajawal", sans-serif;
+  /* Header Styles Start Here*/
+  /* Main Section Styles Start Here*/ }
+  .rtl header .brand {
+    margin-left: 0;
+    margin-right: -165px;
+    background-position-x: -80px; }
+    .rtl header .brand.wide {
+      margin-right: 0;
+      background-position-x: 0; }
+  .rtl header .options {
+    margin-left: 0;
+    margin-right: auto; }
+    .rtl header .options .user .dropdown {
+      margin-right: 0;
+      margin-left: 15px; }
+      .rtl header .options .user .dropdown .photo.dropdown-toggle::after {
+        right: auto;
+        left: -20px; }
+      .rtl header .options .user .dropdown .dropdown-menu.show {
+        margin-left: -15px; }
+  .rtl main aside .main-menu .nav-menu .menu-item .mdi {
+    margin-right: 0;
+    margin-left: 10px; }
+  .rtl main section .breadcrumb .breadcrumb-item + .breadcrumb-item {
+    padding-left: 0;
+    padding-right: 5px; }
+    .rtl main section .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+      content: ">";
+      padding-right: 0;
+      padding-left: 5px; }
+
+/*# sourceMappingURL=ar-styles.css.map */

@@ -1,0 +1,39 @@
+<div class="page-wrapper">
+  <h2 class="list-title">{{'menu.' + listTitle | translate}}</h2>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">{{'page.level' | translate}}</a></li>
+      <li class="breadcrumb-item"><a href="#">{{'page.level' | translate}}</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{'page.level' | translate}}</li>
+    </ol>
+  </nav>
+  <div class="list-options">
+  <span class="option" (click)="takeAction('new')">
+    <span class="mdi mdi-plus"></span>{{'page.new' | translate}} {{listTitle | translate}}
+  </span>
+    <span class="option" (click)="takeAction('block')">
+    <span class="mdi mdi-block-helper"></span>{{'page.block' | translate}}
+  </span>
+    <span class="option" (click)="takeAction('activate')">
+    <span class="mdi mdi-check"></span>{{'page.activate' | translate}}
+  </span>
+  </div>
+  <aside [class.active]="listAction">
+    <div class="option new" *ngIf="currentOption === 'new'">
+      <div class="option-title">
+        <span class="mdi mdi-plus"></span>{{'page.new' | translate}} {{listTitle | translate}}
+      </div>
+    </div>
+    <div class="option block" *ngIf="currentOption === 'block'">
+      <div class="option-title">
+        <span class="mdi mdi-block-helper"></span>{{'page.block' | translate}} {{listTitle | translate}}
+      </div>
+    </div>
+    <div class="option activate" *ngIf="currentOption === 'activate'">
+      <div class="option-title">
+        <span class="mdi mdi-check"></span>{{'page.activate' | translate}} {{listTitle | translate}}
+      </div>
+    </div>
+    <div class="close-action" (click)="closeAction()">Close</div>
+  </aside>
+</div>

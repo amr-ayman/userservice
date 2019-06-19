@@ -1,0 +1,24 @@
+<nav class="main-menu" [class.active]="activeSidebar">
+  <ul class="nav-menu">
+    <li class="menu-item"  routerLinkActive="active" routerLink="/dashboard"
+        [placement]="placement" ngbTooltip="{{'menu.dashboard' | translate}}" tooltipClass="large-tooltip">
+      <span class="mdi mdi-home"></span>
+      <a class="menu-link" href="javascript:"> {{'menu.dashboard' | translate}}</a>
+    </li>
+    <li class="menu-item"  routerLinkActive="active" routerLink="/privileges"
+        [placement]="placement" ngbTooltip="{{'menu.privileges' | translate}}" tooltipClass="large-tooltip">
+      <span class="mdi mdi-account-star"></span>
+      <a class="menu-link" href="javascript:">{{'menu.privileges' | translate}}</a>
+    </li>
+    <li class="menu-item" routerLinkActive="active" routerLink="/roles"
+        [placement]="placement" ngbTooltip="{{'menu.roles' | translate}}" tooltipClass="large-tooltip">
+      <span class="mdi mdi-account-network"></span>
+      <a class="menu-link" href="javascript:">{{'menu.roles' | translate}}</a>
+    </li>
+    <li class="menu-item" routerLinkActive="active" routerLink="/users"
+        [placement]="placement" ngbTooltip="{{'menu.users' | translate}}" tooltipClass="large-tooltip">
+      <span class="mdi mdi-account-group"></span>
+      <a class="menu-link" href="javascript:">{{'menu.users' | translate}}</a>
+    </li>
+  </ul>
+</nav>

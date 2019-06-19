@@ -1,0 +1,11 @@
+<div class="layout">
+  <app-header (sidebar)="onToggle($event)"></app-header>
+  <main>
+    <aside>
+      <app-sidebar [activeSidebar]="activeSidebar"></app-sidebar>
+    </aside>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </main>
+</div>

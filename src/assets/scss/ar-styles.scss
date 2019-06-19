@@ -1,0 +1,71 @@
+@import "en-styles";
+.rtl {
+  direction: rtl;
+  text-align: right;
+  font-family: $font-secondary;
+  /* Header Styles Start Here*/
+  header {
+    .brand {
+      margin-left: 0;
+      margin-right: -165px;
+      background-position-x: -80px;
+      &.wide {
+        margin-right: 0;
+        background-position-x: 0;
+      }
+    }
+
+    .options {
+      margin-left: 0;
+      margin-right: auto;
+      .user {
+        .dropdown {
+          margin-right: 0;
+          margin-left: 15px;
+          .photo {
+            &.dropdown-toggle::after {
+              right: auto;
+              left: -20px;
+            }
+          }
+          .dropdown-menu {
+            &.show {
+              margin-left: -15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Main Section Styles Start Here*/
+  main {
+    aside {
+      .main-menu {
+        .nav-menu {
+
+          .menu-item {
+
+            .mdi {
+              margin-right: 0;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+    section {
+      .breadcrumb {
+        .breadcrumb-item+.breadcrumb-item {
+          padding-left: 0;
+          padding-right: 5px;
+          &::before {
+            content: ">";
+            padding-right: 0;
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}

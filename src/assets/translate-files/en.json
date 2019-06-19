@@ -1,0 +1,19 @@
+{
+  "header": {
+    "lang": "العربية",
+    "profile": "My Profile",
+    "logout": "Logout"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "privileges": "Privileges",
+    "roles": "Roles",
+    "users": "Users"
+  },
+  "page": {
+    "level": "Level",
+    "new": "New",
+    "block": "Block",
+    "activate": "Activate"
+  }
+}

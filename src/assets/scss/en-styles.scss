@@ -1,0 +1,295 @@
+@import "variables";
+@import "mixins";
+
+body {
+  overflow: hidden;
+  min-width: 320px;
+  font-family: $font-primary;
+}
+
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles Start Here*/
+header {
+  display: flex;
+  align-items: center;
+  background-color: $dark-blue;
+
+  .brand {
+    width: 250px;
+    height: 70px;
+    margin-left: -165px;
+    background-position-x: 80px;
+    background-image: url("../images/orcatech-logo.png");
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.wide {
+      margin-left: 0;
+      background-position-x: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .toggle {
+    .mdi {
+      color: $white;
+      font-size: 21px;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: $orange;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .options {
+    width: 200px;
+    display: flex;
+    padding: 0 30px;
+    margin-left: auto;
+    align-items: center;
+    justify-content: space-between;
+
+    .lang {
+      font-family: $font-secondary;
+
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+
+    .user {
+      .dropdown {
+        margin-right: 15px;
+
+        .photo {
+          width: 50px;
+
+          img {
+            max-width: 100%;
+          }
+
+          &.dropdown-toggle::after {
+            color: $white;
+            position: absolute;
+            top: 45%;
+            right: -15px;
+          }
+        }
+
+        .dropdown-menu {
+          &.show {
+            margin-top: 9px;
+            margin-left: 15px;
+          }
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  @include small-screen {
+
+  }
+}
+
+/* Main Section Styles Start Here*/
+main {
+  flex-grow: 1;
+  display: flex;
+
+  aside {
+    margin-top: -1px;
+
+    .main-menu {
+      width: 80px;
+      height: 100%;
+      background-color: $dark-blue;
+      transition: all 0.2s ease-in-out;
+
+      .nav-menu {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        .menu-item {
+          padding: 15px 30px;
+
+          .mdi {
+            color: $light-blue;
+            font-size: 18px;
+            margin-right: 10px;
+          }
+
+          .menu-link {
+            display: none;
+            color: $light-blue;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+
+          &.active {
+            background-color: $dark-more-blue;
+
+            .mdi {
+              color: $orange;
+            }
+
+            .menu-link {
+              color: $white;
+            }
+          }
+
+          &:hover {
+            cursor: pointer;
+            background-color: rgba(4, 37, 101, 0.5);
+
+            &.active {
+              background-color: $dark-more-blue;
+            }
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      &.active {
+        width: 250px;
+
+        .nav-menu {
+          .menu-item {
+            .menu-link {
+              display: inline-block;
+            }
+          }
+
+          .large-tooltip {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    flex-grow: 1;
+    padding: 20px 15px;
+    position: relative;
+    background-color: $off-white;
+
+    .page-wrapper {
+      .list-title {
+        font-size: 28px;
+        font-weight: 700;
+      }
+
+      .breadcrumb {
+        background: none;
+        padding: 0 0 10px 0;
+        border-bottom: 1px solid $medium-gray;
+
+        .breadcrumb-item + .breadcrumb-item {
+          padding-left: 5px;
+
+          &::before {
+            color: #6c757d;
+            content: ">";
+            padding-right: 5px;
+          }
+        }
+      }
+
+      .list-options {
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+
+        .option {
+          .mdi {
+            margin-right: 5px;
+
+            &.mdi-plus {
+              color: $orange;
+            }
+
+            &.mdi-block-helper {
+              color: $red;
+            }
+
+            &.mdi-check {
+              color: $green;
+            }
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      aside {
+        width: 23%;
+        min-width: 335px;
+        max-width: 475px;
+        height: 100%;
+        position: absolute;
+        top: 1px;
+        right: -100%;
+        background-color: $white;
+        box-shadow: -1px 0 3px rgba(0, 0, 0, 0.10);
+        transition: all 0.3s ease-in-out;
+
+        .option {
+          height: 230px;
+          padding: 30px;
+
+          .option-title {
+            color: $white;
+            font-size: 24px;
+            margin-top: 100px;
+
+            .mdi {
+              margin-right: 10px;
+            }
+          }
+
+          &.new {
+            background-color: $orange;
+          }
+
+          &.block {
+            background-color: $red;
+          }
+
+          &.activate {
+            background-color: $green;
+          }
+        }
+
+        &.active {
+          right: 0;
+        }
+      }
+    }
+  }
+}

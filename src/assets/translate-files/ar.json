@@ -1,0 +1,19 @@
+{
+  "header": {
+    "lang": "English",
+    "profile": "الملف الشخصى",
+    "logout": "تسجيل الخروج"
+  },
+  "menu": {
+    "dashboard": "الرئيسية",
+    "privileges": "الإمتيازات",
+    "roles": "الأدوار",
+    "users": "المستخدمين"
+  },
+  "page": {
+    "level": "المسار",
+    "new": "إضافة",
+    "block": "حجب",
+    "activate": "تنشيط"
+  }
+}
